@@ -32,7 +32,7 @@ bentoml serve  service:IrisPredict
 ```yanl
 service: "service:IrisPredict"
 labels:
-  owner: Rick
+  owner: <you can input anything>
   project: Iris_Predict
 models:
   - "clf:latest" # A string model tag
