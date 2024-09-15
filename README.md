@@ -11,7 +11,7 @@ Explore practical examples, learn best practices, and get started with BentoML f
 
 ### Build Environment in your local 
 
-Build Web Page 
+### Build Web Page 
 ```bash
 git clone https://github.com/as183789043/BentoML-Iris-Predict.git
 cd BentoML-Iris-Predict
@@ -20,15 +20,15 @@ python train.py
 bentoml serve  service:IrisPredict
 ```
 
-Enter Web Page (Chrome or Edge)
+### Enter Web Page (Chrome or Edge)
 ```
 [localhost:3000](http://localhost:3000)
 ```
-You will see something like this
+### You will see something like this
 ![image](https://github.com/user-attachments/assets/54f838a8-4cd0-4af8-9732-7e27eb4e97c5)
 
-## Build Container image
-you need to have a bentofile.yaml
+## Build Container image 
+### you need to have a bentofile.yaml
 ```yanl
 service: "service:IrisPredict"
 labels:
@@ -43,18 +43,18 @@ python:
   requirements_txt: "./requirements.txt"
 ```
 
-build model to bentoml 
+## Build model to bentoml 
 ```
 bentoml build
 bentoml list
 bentoml containerize iris_predict:latest
 ```
 
-you will get image in docker desktop
+### you will get image in docker desktop
 ![image](https://github.com/user-attachments/assets/ef1a6015-4008-471c-97f5-0c80d94296d4)
 
 
-run image
+## Run image
 ```
 docker run --rm -p 3000:3000 iris_predict:<version>
 ```
