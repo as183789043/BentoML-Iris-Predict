@@ -1,0 +1,11 @@
+service: "service:IrisPredict"
+labels:
+  owner: Rick
+  project: Iris_Predict
+models:
+  - "clf:latest" # A string model tag
+  - tag: "clf:latest"
+include:
+  - "*.py"
+python:
+  requirements_txt: "./requirements.txt"
